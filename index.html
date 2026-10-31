@@ -53,6 +53,11 @@
     h1 { max-width: 520px; margin-bottom: 16px; font: 500 clamp(38px, 5.5vw, 65px)/1.04 Manrope, sans-serif; letter-spacing: -.065em; }
     h1 span { color: var(--green); }
     .hero-copy { max-width: 430px; margin-bottom: 25px; color: var(--muted); font-size: 16px; line-height: 1.75; }
+    .hero-profile { width: fit-content; max-width: 100%; display: flex; align-items: center; gap: 14px; margin: -5px 0 25px; padding: 9px 20px 9px 9px; border: 1px solid rgba(38, 122, 89, .13); border-radius: 999px; background: rgba(255,255,255,.78); box-shadow: 0 10px 28px rgba(31, 80, 63, .07); }
+    .profile-photo-frame { width: 82px; height: 82px; flex: 0 0 auto; padding: 3px; border-radius: 50%; background: linear-gradient(145deg, #267a59, #b9e0c8); }
+    .profile-photo { display: block; width: 100%; height: 100%; border-radius: 50%; object-fit: cover; object-position: center 30%; }
+    .profile-name { display: block; color: var(--ink); font: 700 15px/1.3 Manrope, sans-serif; letter-spacing: -.025em; }
+    .profile-title { display: block; margin-top: 5px; color: var(--muted); font-size: 10px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
     .button { min-height: 48px; display: inline-flex; align-items: center; justify-content: center; gap: 9px; padding: 0 18px; border: 0; border-radius: 999px; text-decoration: none; font: 700 13px/1 "DM Sans", sans-serif; cursor: pointer; transition: transform .2s, box-shadow .2s, background .2s; }
     .button:hover { transform: translateY(-2px); }
@@ -158,7 +163,11 @@
         <div>
           <p class="eyebrow">Un espacio para ti</p>
           <h1 id="welcome-title">Qué bueno que <span>estás aquí.</span></h1>
-          <p class="hero-copy">Soy Claudia Espinosa, psicóloga clínica. Te doy la bienvenida a un espacio de escucha y acompañamiento, a tu ritmo.</p>
+          <p class="hero-copy">Te doy la bienvenida a un espacio de escucha y acompañamiento, a tu ritmo.</p>
+          <div class="hero-profile" aria-label="Tu psicóloga">
+            <span class="profile-photo-frame"><img class="profile-photo" src="claudia-espinosa.jpg" alt="Retrato de Claudia Espinosa, psicóloga clínica" width="82" height="82" fetchpriority="high"></span>
+            <span><strong class="profile-name">Claudia Espinosa</strong><small class="profile-title">Psicóloga clínica</small></span>
+          </div>
           <div class="hero-actions">
             <a class="button button-primary" href="#video">
               <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m9 6 9 6-9 6V6Z" fill="currentColor"/></svg>
